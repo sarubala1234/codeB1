@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Basic Static Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to the Homepage</h1>
+        <p>This is the homepage of the basic static website.</p>
+
+        <!-- Quotes Section -->
+        <section id="quotes-section" class="quotes-section">
+            <div class="quote-display">
+                <p id="quote-text" class="quote-text"></p>
+                <p id="quote-author" class="quote-author"></p>
+            </div>
+            <button id="new-quote-btn" class="new-quote-btn">New Quote</button>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Basic Static Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Basic Static Website</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Background Layers -->
+    <div id="background-layers-container">
+        <div id="background-gradient-mesh"></div>
+        <div id="background-parallax-waves"></div>
+        <div id="background-particle-nebula"></div>
+        <div id="background-glassmorphism"></div>
+        <div id="background-morphing-blobs"></div>
+        <div id="background-ribbon-gradient"></div>
+        <div id="background-floating-bokeh"></div>
+    </div>
+
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <center>
+        <h1>Contact Us</h1>
+        </center>
+        <p>This is the contact page of the basic static website. Feel free to reach out to us.</p>
+        <form class="contact-form" action="https://formspree.io/f/mayvlqyo" method="POST" id="contact-form">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" placeholder="Your name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" placeholder="Your email" required /><br />
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea><br />
+            <button type="submit" class="btn-primary">Send</button>
+        </form>
+        <div id="response-message" style="margin-top: 1rem; font-weight: 600; color: #2AF598;"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Basic Static Website</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,564 @@
+/* Trendy UI/UX Style Theme */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #EAEAEA;
+    background: linear-gradient(120deg, #141E30, #243B55);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main content grow to fill available space */
+main {
+    flex-grow: 1;
+}
+
+/* Header styling */
+header {
+    background: rgba(255, 255, 255, 0.08);
+    color: #EAEAEA;
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation styling */
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 1.5rem;
+}
+
+.nav-list a {
+    color: #EAEAEA;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background: #00CFFF;
+    color: #EAEAEA;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #00CFFF, 0 0 30px #00CFFF;
+}
+
+/* Main content styling */
+main {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 2rem 2.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    transition: box-shadow 0.3s ease;
+    color: #EAEAEA;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+main:hover {
+    box-shadow: 0 0 30px rgba(42, 245, 152, 0.5);
+}
+
+h1 {
+    margin-bottom: 1.2rem;
+    color: #2AF598;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #00CFFF;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+h1:hover::after {
+    width: 100px;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #EAEAEA;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #00CFFF;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+main p:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.3);
+}
+
+/* Keyframes for footer animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer styling */
+footer {
+    background: rgba(255, 255, 255, 0.08);
+    color: #EAEAEA;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 15px rgba(42, 245, 152, 0.3);
+    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(42, 245, 152, 0.5);
+}
+
+/* Additional styles for welcome, about, contact sections */
+main.welcome-section, main.about-section, main.contact-section {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    transition: all 0.3s ease;
+    color: #EAEAEA;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+main.welcome-section:hover, main.about-section:hover, main.contact-section:hover {
+    box-shadow: 0 0 30px rgba(42, 245, 152, 0.5);
+    transform: translateY(-2px);
+}
+
+main.about-section h1, main.contact-section h1 {
+    font-size: 2.8rem;
+    color: #2AF598;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+main.welcome-section p, main.about-section p, main.contact-section p {
+    font-size: 1.25rem;
+    color: #EAEAEA;
+    line-height: 1.8;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    border-left: 4px solid #00CFFF;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+main.welcome-section p:hover, main.about-section p:hover, main.contact-section p:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.3);
+}
+
+/* Quotes Section */
+.quotes-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    color: #EAEAEA;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quote-display {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    backdrop-filter: blur(5px);
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-family: 'Georgia', serif;
+    color: #2AF598;
+    font-weight: 500;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00CFFF;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.new-quote-btn {
+    background: #00CFFF;
+    color: #EAEAEA;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00CFFF;
+    font-weight: 600;
+}
+
+.new-quote-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00CFFF, 0 0 40px #00CFFF;
+}
+
+/* Code Snippet Section */
+.code-snippet-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    animation: fadeIn 1.5s ease-out;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-snippet {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 1rem;
+    color: #EAEAEA;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Floating Tech Icons Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.5;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Contact Form Glassmorphism Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+    box-shadow: 0 0 30px rgba(42, 245, 152, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Response message styles */
+#response-message {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.success-message {
+    color: #2AF598;
+}
+
+.error-message {
+    color: #FF6B6B;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2AF598;
+    font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #EAEAEA;
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00CFFF;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(234, 234, 234, 0.6);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00CFFF, #2AF598);
+    color: #EAEAEA;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 207, 255, 0.5), 0 0 40px rgba(42, 245, 152, 0.3);
+}
+
+/* Profile Image Glassmorphism Styling */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 2rem auto;
+    display: block;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(42, 245, 152, 0.5), 0 0 40px rgba(0, 207, 255, 0.3);
+    border-color: #00CFFF;
+}
+
+/* Enhanced Mobile Navigation */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #EAEAEA;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 207, 255, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-list.open {
+        max-height: 500px;
+    }
+
+    .nav-list li {
+        margin: 0.7rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 1rem;
+        margin: 0.2rem 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list a:hover,
+    .nav-list a.active {
+        background: rgba(0, 207, 255, 0.2);
+        transform: translateY(0);
+        box-shadow: 0 0 15px rgba(0, 207, 255, 0.3);
+    }
+
+    main {
+        margin: 1.5rem auto;
+        padding: 1.5rem 1.8rem;
+        background: rgba(255, 255, 255, 0.08);
+        color: #EAEAEA;
+        backdrop-filter: blur(10px);
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .quotes-section {
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        color: #EAEAEA;
+        box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+        color: #2AF598;
+    }
+
+    .code-snippet {
+        font-size: 0.9rem;
+        color: #EAEAEA;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0 0.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-list a {
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        color: #EAEAEA;
+    }
+
+    main {
+        padding: 1rem 1rem;
+        background: rgba(255, 255, 255, 0.08);
+        color: #EAEAEA;
+        backdrop-filter: blur(10px);
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        color: #2AF598;
+    }
+
+    .quotes-section {
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.08);
+        color: #EAEAEA;
+        box-shadow: 0 0 20px rgba(42, 245, 152, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .quote-text {
+        font-size: 1rem;
+        color: #2AF598;
+    }
+
+    .code-snippet {
+        font-size: 0.8rem;
+        color: #EAEAEA;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(5px);
+    }
+}
